@@ -5,7 +5,7 @@ package com.corndel.cashregister;
 public class Sandbox {
 
         public static void main(String[] args) {
-//            drawSemicircle(15);
+            drawSemicircle(15);
             Movie movie = new Movie("Iron Giant");
             System.out.println(movie.title);
 

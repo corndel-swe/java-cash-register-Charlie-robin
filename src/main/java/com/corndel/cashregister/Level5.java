@@ -3,7 +3,6 @@ package com.corndel.cashregister;
 import com.corndel.cashregister.models.Item;
 
 import java.util.List;
-import java.util.logging.Level;
 
 public class Level5 {
     /**
