@@ -9,6 +9,8 @@ public class Exercise3b {
    */
   public static int countServings(RecipeBook recipeBook) {
     // TODO
-    return 0;
+    return recipeBook.getRecipes()
+            .stream()
+            .reduce(0, (acc, recipe) -> acc + recipe.getServings(), Integer::sum);
   }
 }

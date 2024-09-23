@@ -2,6 +2,7 @@ package com.corndel.cashregister.exercises;
 
 import com.corndel.cashregister.exercises.models.Recipe;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Exercise2b {
   /**
@@ -10,6 +11,6 @@ public class Exercise2b {
    */
   public static List<String> listNames(List<Recipe> recipes) {
     // TODO
-    return null;
+    return recipes.stream().map(Recipe::getName).collect(Collectors.toList());
   }
 }
