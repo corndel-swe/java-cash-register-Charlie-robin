@@ -9,6 +9,6 @@ public class Exercise2a {
    */
   public static int countVeggies(List<Recipe> recipes) {
     // TODO
-    return 0;
+    return (int) (recipes.stream().filter(Recipe::isVegetarian).count());
   }
 }

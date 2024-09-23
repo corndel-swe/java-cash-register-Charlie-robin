@@ -2,6 +2,7 @@ package com.corndel.cashregister;
 
 import com.corndel.cashregister.models.Item;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Level1 {
   /**
@@ -10,15 +11,22 @@ public class Level1 {
    */
   public static List<Item> removeItem(String name, List<Item> drawer) {
     // TODO
-    return null;
+    return drawer.stream().peek(item -> {
+      if (item.getName().equals(name)) {
+        item.setQuantity(Math.max(0, item.getQuantity() - 1));
+      }
+    }).collect(Collectors.toList());
   }
 
   /**
    * The same as removeItem but adds an item of currency instead
    */
   public static List<Item> addItem(String name, List<Item> drawer) {
-    // TODO
-    return null;
+    return drawer.stream().peek(item -> {
+      if (item.getName().equals(name)) {
+        item.setQuantity(item.getQuantity() + 1);
+      }
+    }).collect(Collectors.toList());
   }
 
   /**
